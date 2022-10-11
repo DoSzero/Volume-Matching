@@ -1,5 +1,6 @@
 package com.volum.volumematching.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.volum.volumematching.databinding.ActivityAuthorsBinding
@@ -16,5 +17,12 @@ class AuthorsActivity: AppCompatActivity() {
         if (supportActionBar != null) {
             this.supportActionBar?.hide();
         }
+
+        binding.btnToMain.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+
+        }
+
     }
 }
